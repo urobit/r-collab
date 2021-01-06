@@ -61,4 +61,4 @@ salmon_gg
 ```
 
 
-!()[https://octodex.github.com/images/Sentrytocat_octodex.jpg]
+![](https://octodex.github.com/images/Sentrytocat_octodex.jpg)
