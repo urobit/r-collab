@@ -15,7 +15,7 @@ library(paletteer) # install.packages("paletteer")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-``` {r}
+``` {r, include=FALSE}
 
 us_landings <- read_csv(here("data","noaa_landings.csv"),
                         na = "no data")
@@ -33,7 +33,7 @@ salmon_clean <- us_landings %>%
 salmon_clean
 ```
 
-``` {r}
+``` {r, include=FALSE}
 
 salmon_us_annual <- salmon_clean %>% 
   group_by(year, subgroup) %>% 
@@ -44,7 +44,7 @@ salmon_us_annual <- salmon_clean %>%
 ```
 
 
-``` {r}
+``` {r, include=FALSE}
 
 salmon_gg <- 
   ggplot(salmon_us_annual, 
@@ -53,7 +53,12 @@ salmon_gg <-
   theme_bw() +
   labs(x = "year", y = "US commercial salmon value (USD)") +
   scale_color_paletteer_d("colorBlindness::Blue2Orange10Steps")
+```
 
+``` {r}
 salmon_gg
 
 ```
+
+
+!()[https://octodex.github.com/images/Sentrytocat_octodex.jpg]
